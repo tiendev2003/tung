@@ -5,6 +5,7 @@ import baseApi from './../../utils/api';
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async ({  page, limit, title, category, price }) => {
+    
     const response = await baseApi.get('/products', {
       params: {
         page,

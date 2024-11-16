@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import "./ShopDetails.css";
+import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import { FaCartPlus, FaStar } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { FiHeart } from "react-icons/fi";
+import { IoClose, IoFilterSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { addToCart } from "../../../Features/Cart/cartSlice";
 import { fetchProducts } from "../../../Features/Product/productSlice"; // Import the fetchProducts action
 import Filter from "../Filters/Filter";
-import { Link } from "react-router-dom";
-import { FiHeart } from "react-icons/fi";
-import { FaStar, FaCartPlus } from "react-icons/fa";
-import { IoFilterSharp, IoClose } from "react-icons/io5";
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
-import toast from "react-hot-toast";
+import "./ShopDetails.css";
 
 const ShopDetails = () => {
   const dispatch = useDispatch();
@@ -180,9 +180,7 @@ const ShopDetails = () => {
                             className="sdProduct_back"
                           />
                         </Link>
-                        <h4 onClick={() => handleAddToCart(product)}>
-                          Add to Cart
-                        </h4>
+                        
                       </div>
                       <div
                         className="sdProductImagesCart"
